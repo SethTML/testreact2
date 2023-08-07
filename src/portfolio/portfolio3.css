@@ -1,0 +1,937 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.Crumb{
+    font-family: "Poppins";
+    font-size: 20px;
+    background-color: rgb(53, 107, 255);
+    border-bottom: 3px solid rgb(53, 107, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 65px;
+}
+
+.Head{
+    font-family: "Poppins";
+    font-size: 40px;
+    font-weight: 500;
+}
+
+@media (max-width:400px) {
+    .Head{
+        font-size: 30px;
+        white-space: nowrap;
+    }
+}
+
+.App{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header{
+    position: fixed;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.HeaderShadow{
+    box-shadow: 0 4px 11px -4px rgb(209, 209, 209);
+}
+
+.HeaderContent{
+    width:100%;
+    height: 70px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLogo{
+    font-family: "Poppins";
+    font-size: 32px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.HeaderLogoBox{
+    margin-left: 25px;
+    width: 130px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.HeaderGroup{
+    height: 100%;
+    width: 450px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.BurgerGroup{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.HeaderBurger{
+    height: 50%;
+    width: 45px;
+    margin-right: 5%;
+    margin-left: auto;
+    background-image: url("./Images/burgerGO.png");
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.BurgerSlider{
+    height: 0px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.BurgerBorder{
+
+}
+
+.SliderAnim{
+    height: 300px;
+}
+
+@media (max-width:850px) {
+
+    .HeaderLogo{
+        font-size: 25px;
+    }
+
+    .HeaderGroup{
+        display: none;
+    }
+
+    .HeaderBurger{ 
+        display: block;
+    }
+
+    .BurgerSlider{
+        display: flex;
+    }
+}
+
+.HGroupItem{
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.HGroupItem:hover{
+    color: rgb(53, 107, 255);
+}
+
+.HeroCover{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hero{
+    width: 90%;
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeroDesc{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+}
+
+.HDIntro{
+    font-family: 'Poppins';
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.HDIntroWave{
+    margin-left: 20px;
+}
+
+.HDRole{
+    font-family: 'Poppins';
+    font-size: 79px;
+    font-weight: 700;
+}
+
+.HDLocation{
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.HeroImg{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.HeroImage{
+    border: 7px solid rgb(35, 72, 172);
+    background-image: url("./Images/DarkBG.jpg");
+    background-size: cover;
+}
+
+.HDButtons{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.Button-Portfolio{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(40,40,40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Button-Contact{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ButtonFont1{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.ButtonFont2{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 1400px){
+    .HDIntro{
+        font-size: 55px;
+    }
+
+    .HDRole{
+        font-size: 65px;
+    }
+
+    .HDLocation{
+        font-size: 22px;
+    }
+    
+    .HeroImage{
+        width: 275px;
+    }
+}
+
+@media (max-width:950px) {
+
+    .Hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 85px;
+    }
+
+    .HDRole{
+        white-space: nowrap;
+        font-size: 50px;
+    }
+
+    .HDIntroWave{
+        display: none;
+    }
+
+    .HeroDesc{
+        align-items: center;
+    }
+
+    .HeroImg{
+        margin-left:0px;
+    }
+
+    .HDButtons{
+        width: 300px;
+    }
+
+    .HeroImage{
+        width: 30%;
+    }
+}
+
+@media (max-width:750px) {
+
+    .HeroImage{
+        width: 45%;
+    }
+
+    .HDIntro{
+        font-size: 30px;
+    }
+
+    .HDRole{
+        font-size: 30px;
+    }
+
+    .HDLocation{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    
+    .HeroImage{
+        width: 55%;
+    }
+}
+
+@media (max-width:400px) {
+    
+    .HeroImage{
+        width: 70%;
+    }
+}
+
+@media (max-width:330px) {
+    .HDRole{
+        font-size: 28px;
+    }
+
+    .HDLocation{
+        font-size: 19px;
+    }
+}
+
+.AboutCover{
+    width: 100%;
+    display: flex;
+    background-color: rgb(251, 251, 251);
+    justify-content: center;
+}
+
+.About{
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AboutTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AboutContent{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.AboutImage{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.AboutImg{
+    height: 750px;
+    border-radius: 2px;
+    margin-right: 30px;
+}
+
+.AboutBody{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.ABIntro{
+    font-family: 'Poppins';
+    font-size: 42px;
+}
+
+.ABISpecial{
+    font-weight: 600;
+    border-bottom: 4px solid rgb(53, 107, 255);
+}
+
+.ABText{
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Poppins';
+    margin-top: 20px;
+    width: 500px;
+}
+
+.AboutExtra{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AExtraYears{
+    font-family: 'Poppins';
+    font-size: 160px;
+    font-weight: 600;
+    padding:0px;
+    margin:0px;
+    z-index: 1;
+    line-height: 1;
+}
+
+.AExtraDesc{
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 500;
+    z-index: 1;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.AExtraCircle{
+    background-color: rgb(53, 107, 255);
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AboutInfo{
+    width: 100%;
+    display: flex;
+}
+
+.AInfoSection{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AITitle{
+    font-size: 19px;
+    font-family: 'Poppins';
+    color: rgb(60,60,60);
+}
+
+.AIContent{
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+@media (max-width:1369px) {
+    .ABIntro{
+        font-size: 35px;
+    }
+
+    .ABText{
+        font-size: 25px;
+        width: 468px;
+    }
+
+    .AboutImg{
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .AboutContent{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .AboutImage{
+        width:100%;
+        justify-content: center;
+    }
+
+    .AboutImg{
+        width: 60%;
+        height: fit-content;
+        margin-right: 0px;
+    }
+
+    .AboutBody{
+        width: 100%;
+        align-items: center;
+    }
+
+    .ABIntro{
+        font-size: 25px;
+    }
+
+    .ABText{
+        text-align: center;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .AboutBody{
+        margin-left: 0px;
+    }
+}
+
+.SkillsCover{
+    width: 100%;
+    min-height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Skills{
+    width: 90%;
+    max-width: 1300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SkillGrid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 600px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.SkillItem{
+    flex:1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid rgb(233, 233, 233);
+    margin:10px;
+    box-shadow: 0px 0px 10px rgb(117, 117, 117);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.SkillImage{
+    width: 50px;
+}
+
+.SkillFont{
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.SkillDesc{
+    font-family: 'Poppins';
+    font-size: 18px;
+    text-align: center;
+    color: rgb(134, 134, 134);
+    width: 80%;
+}
+
+.PortfolioCover{
+    min-height: 900px ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(251, 251, 251);
+}
+
+.Portfolio{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Projects{
+    width: 90%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Project{
+    width: 90%;
+    min-height: 450px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px rgb(214, 214, 214);
+}
+
+.ProjectImage{
+    width: 51%;
+    height: 92%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ProjectImg{
+    width:100%;
+}
+
+.ProjectInfo{
+    width: 41%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectName{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+.ProjectDesc{
+    font-family: 'Poppins';
+    color: rgb(100,100,100);
+    text-align: center;
+    width: 300px;
+}
+
+.ProjectToolbox{
+    display: flex;
+}
+
+.ProjectTool{
+    margin: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px rgb(136, 136, 136);
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-family: 'Poppins';
+    white-space: nowrap;
+}
+
+.ProjectSource{
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 50px;
+}
+
+.SourceCode{
+    width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.SourceView{
+    width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.SourceFont{
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Sourcego{
+    margin-left: 5px;
+}
+
+@media (max-width:900px) {
+    .Project{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ProjectInfo{
+        height: 50%;
+        width: 90%;
+    }
+
+    .ProjectImage{
+        width: 75%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:500px) {
+    .ProjectDesc{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .SourceFont{
+        margin-bottom: 30px;
+    }
+}
+
+.ContactCover{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact{
+    max-width: 1440px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContactBox{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.LocationFrame{
+    width: 50%;
+    height: 90%;
+    border-radius: 40px;
+    box-shadow: 0px 0px 12px rgb(94, 94, 94);
+    margin-left: 50px;
+}
+
+.ContactInfo{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.InfoImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 1000px;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgb(148, 148, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.InfoTitle{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.InfoContent{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(80,80,80);
+}
+
+.CIBox{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 850px) {
+    .InfoTitle{
+        font-size: 15px;
+    }
+
+    .InfoContent{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .ContactBox{
+        flex-direction: column;
+    }
+
+    .ContactInfo{
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+
+    .LocationFrame{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .CIBox{
+        margin-top: 25px;
+    }
+}
+
+.CopyrightCover{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    justify-content: center;
+}
+
+.Copyright{
+    width: 90%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CopyFont{
+    font-family: 'Poppins';
+    color:rgb(255,255,255);
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 5%;
+}
+
+.SocialIcons{
+    width: 130px;
+    height: 50px;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.GitCon{
+    fill: white;
+    cursor: pointer;
+}
+
+.LinkCon{
+    cursor: pointer;
+}
+
+@media (max-width:550px) {
+    .Copyright{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .SocialIcons{
+        margin-right: 0px;
+    }
+
+    .CopyFont{
+        text-align: center;
+        margin-left: 0px;
+    }
+}
+
+.reveal{
+    transform: translateY(150px);
+    opacity:0;
+    transition: all 1.2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity:1;
+}
